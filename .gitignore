@@ -45,6 +45,9 @@ out/
 # screenshots/
 # traces/
 
+# Pastas geradas (exemplo: a partir de arquivos .feature, dentro de e2e)
+/.features-gen/
+
 # Específico do Cucumber (Relatórios)
 # Se você gerar relatórios do Cucumber em um diretório específico, adicione-o aqui.
 # Exemplo:
