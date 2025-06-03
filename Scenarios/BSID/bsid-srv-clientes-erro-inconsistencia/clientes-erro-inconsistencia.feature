@@ -1,7 +1,14 @@
 #language: pt
-Funcionalidade: Projeto - BSID
+Funcionalidade: SISTRAN » Projeto - TBSID-SRV-CLIENTES-ERRO-INCONSISTENCIA
 
-  @bsidgetcep
-  Cenário: CT005 - Incluir mensagem de erro com descrição "Erro de teste" na API BSID
-    Dado valido a resposta da API Privado
-    Quando incluo e valido a inclusão de uma nova mensagem de erro com a descrição "Erro de teste"
+  @novoerroprivado  @erroprivado
+  Cenário: Inclusão de nova mensagem de erro (POST) - | Responsável: Orivan Junior
+  Dado que existe um id-token valido
+  Então incluo uma nova mensagem de erro com a descrição gerada
+  E consulto as ultimas mensagens de erro cadastradas com sucesso
+
+
+  @consultaerroprivado @erroprivado
+  Cenário: Consulta mensagens de erro (GET) | Responsável: Orivan Junior
+  Dado que existe um id-token valido
+  Então consulto as ultimas mensagens de erro cadastradas com sucesso

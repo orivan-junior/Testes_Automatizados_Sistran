@@ -1,5 +1,5 @@
 # language: pt
-Funcionalidade: BSID-SRV-CLIENTES-AUTO-CADASTRO
+Funcionalidade: SISTRAN » Projeto - BSID-SRV-CLIENTES-AUTO-CADASTRO
 
   @validacpf
   Cenário: Validar CPF que já possui usuário e senha cadastrados

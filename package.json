@@ -17,7 +17,10 @@
     "livelo": "npx bddgen && npx playwright test --grep @livelo",
     "NomeSocial04": "npx bddgen && npx playwright test --grep @NomeSocial_CT004",
     "bsidgetcep": "npx bddgen && npx playwright test --grep @bsidgetcep",
-    "validacpf": "npx bddgen && npx playwright test --grep @validacpf"
+    "validacpf": "npx bddgen && npx playwright test --grep @validacpf",
+    "novoerroprivado": "npx bddgen && npx playwright test --grep @novoerroprivado",
+    "consultaerroprivado": "npx bddgen && npx playwright test --grep @consultaerroprivado",
+    "erroprivado": "npx bddgen && npx playwright test --grep @erroprivado"
   },
   "dependencies": {
     "dotenv": "^16.5.0"
