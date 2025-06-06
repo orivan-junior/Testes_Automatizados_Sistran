@@ -20,7 +20,10 @@
     "validacpf": "npx bddgen && npx playwright test --grep @validacpf",
     "novoerroprivado": "npx bddgen && npx playwright test --grep @novoerroprivado",
     "consultaerroprivado": "npx bddgen && npx playwright test --grep @consultaerroprivado",
-    "erroprivado": "npx bddgen && npx playwright test --grep @erroprivado"
+    "erroprivado": "npx bddgen && npx playwright test --grep @erroprivado",
+    "resumo": "npx bddgen && npx playwright test --grep @bsidresumo",
+    "gerarCpf": "npx bddgen && npx playwright test --grep @gerarCpf",
+    "bsid": "npx bddgen && npx playwright test --grep @bsid"
   },
   "dependencies": {
     "dotenv": "^16.5.0"

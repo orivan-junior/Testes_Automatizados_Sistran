@@ -1,7 +1,7 @@
 # language: pt
 Funcionalidade: SISTRAN » Projeto - BSID-SRV-CLIENTES-AUTO-CADASTRO
 
-  @validacpf
+  @validacpf @bsid
   Cenário: Validar CPF que já possui usuário e senha cadastrados
     Dado que esteja autenticado
     Então eu valido o CPF "16442228096"
@@ -9,7 +9,7 @@ Funcionalidade: SISTRAN » Projeto - BSID-SRV-CLIENTES-AUTO-CADASTRO
     E o sistema deve retornar o código "1"
     E a mensagem "CPF com usuário e senha já cadastrados"
 
-  @validacpf
+  @validacpf @bsid
   Cenário: Validar CPF que não possui usuário chancelado
     Dado que esteja autenticado
     Então eu valido o CPF "75559122017"
@@ -17,7 +17,7 @@ Funcionalidade: SISTRAN » Projeto - BSID-SRV-CLIENTES-AUTO-CADASTRO
     E o sistema deve retornar o código "3"
     E a mensagem "CPF não possui cadastro chancelado"
 
-  @validacpf
+  @validacpf @bsid
   Cenário: Validar CPF que já possui usuário chancelado
     Dado que esteja autenticado
     Então eu valido o CPF "00701423005"
@@ -25,13 +25,13 @@ Funcionalidade: SISTRAN » Projeto - BSID-SRV-CLIENTES-AUTO-CADASTRO
     E o sistema deve retornar o código "4"
     E a mensagem "CPF possui cadastro com chancela"
 
-  @validacpf
+  @validacpf @bsid
   Cenário: Validar CPF Inválido
     Dado que esteja autenticado
     Então eu valido o CPF "855591220175"
     E o sistema deve retornar o código de status 400
 
-  @processachancela
+  @processachancela @bsid
   Cenário: Validação de Cadastro - Processo Chancela
     Dado que esteja autenticado
     Quando eu processo a chancela do CPF com os seguintes dados:

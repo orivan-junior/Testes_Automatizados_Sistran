@@ -8,7 +8,7 @@ dotenv.config();
 // Desestruturando Given e Then. Playwright-bdd trata Given, When, Then, And, But
 // de forma similar para a definição de steps. A palavra-chave exata usada aqui
 // (ex: Given, Then) não precisa corresponder à do Gherkin, desde que a string do step corresponda.
-const { Given, Then } = createBdd();
+const { Given, When, Then } = createBdd();
 
 // Novo Step: Dado que existe um id-token valido
 Given('que existe um id-token valido', async () => {
