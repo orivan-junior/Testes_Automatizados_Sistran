@@ -23,7 +23,8 @@
     "erroprivado": "npx bddgen && npx playwright test --grep @erroprivado",
     "resumo": "npx bddgen && npx playwright test --grep @bsidresumo",
     "gerarCpf": "npx bddgen && npx playwright test --grep @gerarCpf",
-    "bsid": "npx bddgen && npx playwright test --grep @bsid"
+    "bsid": "npx bddgen && npx playwright test --grep @bsid",
+    "processachancela": "npx bddgen && npx playwright test --grep @processachancela"
   },
   "dependencies": {
     "dotenv": "^16.5.0"

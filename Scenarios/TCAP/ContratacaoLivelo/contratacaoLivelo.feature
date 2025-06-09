@@ -33,4 +33,3 @@ Funcionalidade: Jornada Contratacao e Capitalização Livelo
     Então aguardo o pagamento ser efetuado com sucesso
     E clico no botão 'Baixar comprovante' na Jornada TCAP
     E encerro a Jornada TCAP
-    

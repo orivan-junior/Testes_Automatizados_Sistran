@@ -53,5 +53,3 @@ Funcionalidade: Projeto Nome Social - BVPNEXT
     # E preencho o campo 'Valor da Operação' com '1212' no formulário BVPNEXT
     # E clico no botão 'Avançar' na Jornada TCAP
     # E clico no botão "Avançar" na Jornada TCAP
-
-

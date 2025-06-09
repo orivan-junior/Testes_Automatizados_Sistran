@@ -91,25 +91,130 @@ When('eu processo a chancela do CPF com os seguintes dados:', async ({ request }
     console.log(`Resposta: ${JSON.stringify(responseBody, null, 2)}`); // Usando JSON.stringify para formatar a saída
 });
 
+When('eu atribuo um contato ao CPF com os seguintes dados:', async ({ request }, dataTable) => {
+    // Extrair os cabeçalhos e os dados do dataTable
+    const headers = dataTable.rawTable[0];
+    const values = dataTable.rawTable[1];
 
+    // Criar um objeto a partir dos cabeçalhos e valores
+    const requestBody = headers.reduce((obj, header, index) => {
+        obj[header] = values[index];
+        return obj;
+    }, {});
 
+    // Log dos dados para verificação
+    console.log(`Atribuindo contato ao CPF com os dados: ${JSON.stringify(requestBody, null, 2)}`);
 
+    // Enviar a requisição POST como string JSON
+    response = await request.post(`${process.env.BASE_API_URL}/entrada-contatos`, {
+        headers: getApiHeaders(),
+        data: JSON.stringify(requestBody)
+    });
 
+    //Log da resposta (opcional, mas útil para debug)
+    const responseBody = await response.json();
+    console.log(`Resposta: ${JSON.stringify(responseBody, null, 2)}`);
+});
 
+When('eu solicito um token com os seguintes dados:', async ({ request }, dataTable) => {
+    // Extrair os cabeçalhos e os dados do dataTable
+    const headers = dataTable.rawTable[0];
+    const values = dataTable.rawTable[1];
 
+    // Criar um objeto a partir dos cabeçalhos e valores
+    const requestBody = headers.reduce((obj, header, index) => {
+        obj[header] = values[index];
+        return obj;
+    }, {});
 
+    // Log dos dados para verificação (mensagem ajustada)
+    console.log(`Solicitando token com os dados: ${JSON.stringify(requestBody, null, 2)}`);
 
+    // Enviar a requisição POST como string JSON
+    response = await request.post(`${process.env.BASE_API_URL}/solicita-token`, {
+        headers: getApiHeaders(),
+        data: JSON.stringify(requestBody)
+    });
 
+    //Log da resposta (opcional, mas útil para debug)
+    const responseBody = await response.json();
+    console.log(`Resposta: ${JSON.stringify(responseBody, null, 2)}`);
+});
 
+When('eu valido um token com os seguintes dados:', async ({ request }, dataTable) => {
+    // Extrair os cabeçalhos e os dados do dataTable
+    const headers = dataTable.rawTable[0];
+    const values = dataTable.rawTable[1];
 
+    // Criar um objeto a partir dos cabeçalhos e valores
+    const requestBody = headers.reduce((obj, header, index) => {
+        obj[header] = values[index];
+        return obj;
+    }, {});
 
+    // Log dos dados para verificação (mensagem ajustada)
+    console.log(`Solicitando token com os dados: ${JSON.stringify(requestBody, null, 2)}`);
 
+    // Enviar a requisição POST como string JSON
+    response = await request.post(`${process.env.BASE_API_URL}/valida-token`, {
+        headers: getApiHeaders(),
+        data: JSON.stringify(requestBody)
+    });
 
+    //Log da resposta (opcional, mas útil para debug)
+    const responseBody = await response.json();
+    console.log(`Resposta: ${JSON.stringify(responseBody, null, 2)}`);
+});
 
+When('eu altero um contato com os seguintes dados:', async ({ request }, dataTable) => {
+    // Extrair os cabeçalhos e os dados do dataTable
+    const headers = dataTable.rawTable[0];
+    const values = dataTable.rawTable[1];
 
+    // Criar um objeto a partir dos cabeçalhos e valores
+    const requestBody = headers.reduce((obj, header, index) => {
+        obj[header] = values[index];
+        return obj;
+    }, {});
 
+    // Log dos dados para verificação (mensagem ajustada)
+    console.log(`Solicitando token com os dados: ${JSON.stringify(requestBody, null, 2)}`);
 
+    // Enviar a requisição POST como string JSON
+    response = await request.post(`${process.env.BASE_API_URL}/altera-contato`, {
+        headers: getApiHeaders(),
+        data: JSON.stringify(requestBody)
+    });
 
+    //Log da resposta (opcional, mas útil para debug)
+    const responseBody = await response.json();
+    console.log(`Resposta: ${JSON.stringify(responseBody, null, 2)}`);
+});
+
+When('eu crio um usuário com os seguintes dados:', async ({ request }, dataTable) => {
+    // Extrair os cabeçalhos e os dados do dataTable
+    const headers = dataTable.rawTable[0];
+    const values = dataTable.rawTable[1];
+
+    // Criar um objeto a partir dos cabeçalhos e valores
+    const requestBody = headers.reduce((obj, header, index) => {
+        obj[header] = values[index];
+        return obj;
+    }, {});
+
+    // Log dos dados para verificação (mensagem ajustada)
+    console.log(`Solicitando token com os dados: ${JSON.stringify(requestBody, null, 2)}`);
+
+    // Enviar a requisição POST como string JSON
+    response = await request.post(`${process.env.BASE_API_URL}/criacao-usuario`, {
+        headers: getApiHeaders(),
+        data: JSON.stringify(requestBody)
+    });
+
+    //Log da resposta (opcional, mas útil para debug)
+    const responseBody = await response.json();
+    console.log(`Resposta: ${JSON.stringify(responseBody, null, 2)}`);
+});
 
 
 
