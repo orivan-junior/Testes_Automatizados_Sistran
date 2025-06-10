@@ -37,8 +37,10 @@ out/
 !.env.test # Se você tem um .env específico para testes que NÃO contém segredos e precisa ser versionado
 
 # Específico do Playwright
-# /test-results/ # Removido para versionar os resultados dos testes
-# /playwright-report/ # Removido para versionar os relatórios do Playwright
+test-results/
+playwright-report/
+allure-results/
+allure-report/
 /playwright/.cache/
 # Descomente se você grava vídeos/screenshots/traces e não quer versioná-los
 # videos/
